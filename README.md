@@ -311,8 +311,10 @@ source deactivate
 
 ---
 # Hard Mount Error
+
 Unable to access volume. 
 Error mounting /dev/sda4 at media/f/volume.
+
 '''
 $ sudo ntfsfix /dev/sdd2
 '''
