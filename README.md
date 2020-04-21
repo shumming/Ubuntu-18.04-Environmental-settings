@@ -315,9 +315,9 @@ source deactivate
 Unable to access volume. 
 Error mounting /dev/sda4 at media/f/volume.
 
-'''
+```
 $ sudo ntfsfix /dev/sdd2
-'''
+```
 
 # Pycharm
 ## [[**reference**]](https://linuxconfig.org/how-to-install-pycharm-on-ubuntu-18-04-bionic-beaver-linux)
