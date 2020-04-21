@@ -20,6 +20,7 @@
 - [Pytorch](#pytorch)
   
 **ETC**
+- [Hard Mount Error](#hard-mount-error)
 - [Pycharm](#pycharm)
 - [Pytorch tutorial](#pytorch-tutorial)
 - [Other programs](#other-programs)
@@ -309,6 +310,12 @@ source deactivate
 
 
 ---
+# Hard Mount Error
+Unable to access volume. 
+Error mounting /dev/sda4 at media/f/volume.
+'''
+$ sudo ntfsfix /dev/sdd2
+'''
 
 # Pycharm
 ## [[**reference**]](https://linuxconfig.org/how-to-install-pycharm-on-ubuntu-18-04-bionic-beaver-linux)
