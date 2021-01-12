@@ -18,8 +18,12 @@
   
 **Pytorch**
 - [Pytorch](#pytorch)
+
+**Git**
+-[git](#git)
   
 **ETC**
+- [Configureation of ssh](#configuration-of-ssh-configuration)
 - [Hard Mount Error](#hard-mount-error)
 - [Pycharm](#pycharm)
 - [Pytorch tutorial](#pytorch-tutorial)
@@ -156,7 +160,14 @@ sudo chmod +x cuda_9.0.176_384.81_linux.run
 - Cuda samples? [yes]
 - Confirm sample location
 
+- Edit ~/.bashrc file.
 ```
+vim ~/.bashrc
+# Add following two lines
+# export PATH="/usr/local/cuda-9.0/bin:$PATH"
+# export LD_LIBRARY_PATH="/usr/local/cuda-9.0/lib64:$LD_LIBRARY_PATH"
+
+source ~/.bashrc
 nvcc --version
 ```
 
@@ -306,10 +317,68 @@ source activate seokeon_py27_torch031
 conda install pytorch=0.3.1 cuda90 -c pytorch
 source deactivate
 ```
+# Git
+## [[**reference**]](https://m.blog.naver.com/PostView.nhn?blogId=jhc9639&logNo=221491363541&proxyReferer=https:%2F%2Fwww.google.com%2F)
+- Install git
+```
+sudo apt-get install git
+```
+- Register your github ID
+```
+git config --global user.email [email address]
+git config --global user.name [user name]
+```
+- Make git repository
+```
+mkdir Project1
+cd Project1
+git init
+```
+- Commit/Push files
+```
+# Add the file in local repository
+git add [file name]
 
+# Save the changes with comments
+git commit -m "[comments]"
 
+# Connect your github repository
+git remote add [repoository name] [address]
+git remove -v
+
+# Upload commited files
+git push origin master
+
+# Pull
+git pull origin master
+```
+- Branch
+```
+git branch [branch name]      # generate branch
+git checkout [branch_name]    # Move to branch_name
+git checkout -b [branch name] # Generate and move to 
+git branch -d [branch name]   # remove branch
+git branch                    # show branch list
+git merge [branch_name]
+```
+- Git log
+```
+git log
+git log --oneline
+git log --graph
+```
 
 ---
+# Configuration of ssh conection
+```
+vim ~/.ssh/config 
+```
+```
+HOST [server name]
+HOSTNAME [address]
+User [user name]
+```
+
 # Hard Mount Error
 
 Unable to access volume. 
